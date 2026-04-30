@@ -31,3 +31,27 @@ if (idade < 18 || estaLogado) {
 if (!estaLogado) {
     console.log("Faça login para acessar");
 }
+
+//aula pratica
+let salarioPorHora = 30;
+let horasTrabalhadas = 160;
+let salarioFinal = salarioPorHora * horasTrabalhadas;
+console.log(salarioFinal);
+
+let precoOriginal = 200;
+let desconto = precoOriginal * 0.10;
+let precoFinal = precoOriginal - desconto;
+console.log(precoFinal.toFixed(2));
+
+let idade2 = 17;
+let maiorDeIdade = (idade2 >= 18);
+console.log(`Julia é maior de idade: ${maiorDeIdade}`);
+
+let quantidadeItens = 22;
+let ehPar = quantidadeItens % 2 == 0;
+console.log(ehPar);
+
+let chuva = true;
+let guardaChuva = false;
+let irFesta = !chuva && guardaChuva; // ou let irFesta = chuva == false && guardaChuva == true;
+console.log(`Larissa irá a festa: ${irFesta}`);
