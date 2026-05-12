@@ -97,8 +97,7 @@ let identidade = false;
 if (idade >= 18) {
     if (identidade) {
         console.log("Pode comprar bebida alcoólica");
-    }
-    else {
+    } else {
         console.log("Precisa da identidade para poder confirmar a idade");
     }
     } else {
