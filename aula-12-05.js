@@ -57,6 +57,8 @@ while (lanchoneteVirtual < 4) {
 }
 */
 
+// resolução chat gpt
+
 function menu() {
   rl.question(
     'Escolha a opção desejada:\n1 - Ver cardápio\n2 - Fazer um pedido\n3 - Falar com atendente\n4 - Sair\n',
