@@ -37,19 +37,12 @@ const rl = readline.createInterface({
 });
 
 /*
-rl.question('Digite seu nome: ', (nome) => {
-  console.log(`Olá, ${nome}`);
-  rl.close();
-});
-*/
+let lanchoneteVirtual = 0;
 
-let lanchoneteVirtal;
-
-rl.question('Escolha a opção desejada: 1 - Ver cardápio | 2 - Fazer um pedido | 3 - Falar com atendente | 4 - Sair ', (lanchoneteVirtual) => {
-  rl.close();
-});
-
-while (lanchoneteVirtal < 4) {
+while (lanchoneteVirtual < 4) {
+    rl.question('Escolha a opção desejada: 1 - Ver cardápio | 2 - Fazer um pedido | 3 - Falar com atendente | 4 - Sair ', (lanchoneteVirtual) => {
+    rl.close();
+    });
     switch (lanchoneteVirtual) {
         case 1: 
             console.log("Vendo cardápio...");
@@ -62,3 +55,40 @@ while (lanchoneteVirtal < 4) {
             break;
     }
 }
+*/
+
+function menu() {
+  rl.question(
+    'Escolha a opção desejada:\n1 - Ver cardápio\n2 - Fazer um pedido\n3 - Falar com atendente\n4 - Sair\n',
+    (resposta) => {
+
+      switch (resposta) {
+        case '1':
+          console.log("Vendo cardápio...");
+          menu();
+          break;
+
+        case '2':
+          console.log("Fazendo pedido...");
+          menu();
+          break;
+
+        case '3':
+          console.log("Chamando atendente...");
+          menu();
+          break;
+
+        case '4':
+          console.log("Saindo...");
+          rl.close();
+          break;
+
+        default:
+          console.log("Opção inválida!");
+          menu();
+      }
+    }
+  );
+}
+
+menu();
